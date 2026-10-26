@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn beginner English with Linda, an interactive language-learning guide with German explanations.">
+  <title>Little Lingua — Learn with Linda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="linda.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#home" aria-label="Little Lingua home"><span class="logo-icon">✿</span>  Little Lingua<span class="logo-dot">.</span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#lessons">Lessons</a>
+      <a href="#practice">Practice</a>
+      <a href="#checklist">My checklist</a>
+    </nav>
+    <a class="header-cta" href="#lessons">Let's learn <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="home">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> YOUR HAPPY PLACE TO LEARN</span>
+        <h1>New language,<br>new <span class="highlight">adventures!</span></h1>
+        <p class="hero-text">Meet Linda, your owl guide for beginner-friendly English lessons with German explanations.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#lessons">Start a free lesson <span aria-hidden="true">↗</span></a>
+          <a class="quiet-link" href="#practice">Try a quick quiz <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-note"><span aria-hidden="true">⭐</span> Beginner-friendly · Learn at your own pace</div>
+      </div>
+      <div class="hero-picture mascot-card">
+        <svg class="linda__owl" viewBox="0 0 200 220" role="img" aria-label="Linda the owl wearing a graduation cap" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="78" cy="206" rx="16" ry="6" fill="#f5a623"/>
+          <ellipse cx="122" cy="206" rx="16" ry="6" fill="#f5a623"/>
+          <ellipse cx="100" cy="140" rx="62" ry="64" fill="#8b5e3c"/>
+          <ellipse cx="100" cy="152" rx="42" ry="46" fill="#f6e3c4"/>
+          <path d="M76 140q5 6 10 0M92 140q5 6 10 0M108 140q5 6 10 0M84 158q5 6 10 0M100 158q5 6 10 0M92 176q5 6 10 0" fill="none" stroke="#d9b98c" stroke-width="2" stroke-linecap="round"/>
+          <g class="linda__wing linda__wing--left"><path d="M44 122C22 142 26 182 48 190C60 172 62 142 54 122Z" fill="#6f4528"/></g>
+          <g class="linda__wing linda__wing--right"><path d="M156 122C178 142 174 182 152 190C140 172 138 142 146 122Z" fill="#6f4528"/></g>
+          <g class="linda__head">
+            <ellipse cx="100" cy="86" rx="56" ry="46" fill="#a06b44"/>
+            <circle cx="76" cy="84" r="27" fill="#f6e3c4"/>
+            <circle cx="124" cy="84" r="27" fill="#f6e3c4"/>
+            <g class="linda__eye"><circle cx="76" cy="86" r="14" fill="#5b3a1e"/><circle cx="76" cy="86" r="8" fill="#1d1209"/><circle cx="81" cy="80" r="3.5" fill="#fff"/></g>
+            <g class="linda__eye"><circle cx="124" cy="86" r="14" fill="#5b3a1e"/><circle cx="124" cy="86" r="8" fill="#1d1209"/><circle cx="129" cy="80" r="3.5" fill="#fff"/></g>
+            <path d="M92 100L108 100L100 116Z" fill="#f5a623"/>
+            <ellipse cx="56" cy="104" rx="7" ry="4" fill="#f4a38c" opacity=".6"/>
+            <ellipse cx="144" cy="104" rx="7" ry="4" fill="#f4a38c" opacity=".6"/>
+            <path d="M80 56L80 66Q100 76 120 66L120 56L100 64Z" fill="#21796f"/>
+            <path d="M58 50L100 34L142 50L100 66Z" fill="#2a9d8f"/>
+            <path d="M142 50L148 72" stroke="#f5c542" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="148" cy="74" r="4" fill="#f5c542"/>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <section class="language-strip wrap" aria-label="Choose a language">
+      <div class="strip-heading">
+        <span class="eyebrow">YOUR FIRST TWO ADVENTURES</span>
+        <h2>Pick a language to explore</h2>
+      </div>
+      <a class="language-chip english-chip" href="#english"><span class="flag">🇬🇧</span><span><strong>English</strong><small>Say hello to the world</small></span><span class="chip-arrow" aria-hidden="true">↗</span></a>
+      <a class="language-chip german-chip" href="#german"><span class="flag">🇩🇪</span><span><strong>German</strong><small>Hallo, new adventures</small></span><span class="chip-arrow" aria-hidden="true">↗</span></a>
+    </section>
+
+    <section class="lesson-section wrap" id="lessons">
+      <div class="section-heading">
+        <div><span class="eyebrow">LEARN WITH REAL-LIFE PICTURES</span><h2>Little lessons, big moments</h2></div>
+        <span class="time-pill">⏱ Just 5 minutes each</span>
+      </div>
+
+      <article class="lesson-card english-lesson" id="english">
+        <div class="lesson-image">
+          <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="A sunny view over London and the River Thames">
+          <span class="image-tag">🇬🇧 ENGLISH · LESSON 1</span>
+        </div>
+        <div class="lesson-content" lang="de">
+          <div class="lesson-title-row"><div><span class="level-label">ENGLISCH LERNEN · ANFÄNGER</span><h3>Grüßen &amp; dich vorstellen</h3></div><span class="lesson-emoji" aria-hidden="true">👋</span></div>
+          <p class="lesson-intro">Lerne diese freundlichen englischen Sätze kennen. Die Erklärungen sind auf Deutsch.</p>
+          <div class="phrase-list">
+            <div class="phrase"><span class="phrase-dot"></span><span><strong lang="en">Hello! I'm Alex.</strong><small>Setze deinen Namen nach „I'm“ ein.</small></span><span class="translation">Hallo! Ich bin Alex.</span></div>
+            <div class="phrase"><span class="phrase-dot"></span><span><strong lang="en">Nice to meet you!</strong><small>Das sagst du, wenn du jemanden kennenlernst.</small></span><span class="translation">Schön, dich kennenzulernen!</span></div>
+            <div class="phrase"><span class="phrase-dot"></span><span><strong lang="en">How are you?</strong><small>Eine einfache Frage, um zu erfahren, wie es jemandem geht.</small></span><span class="translation">Wie geht es dir?</span></div>
+          </div>
+          <details class="tip-box"><summary>💡 Tipp: „I'm“ ist die Kurzform von „I am“.</summary><p>Beide Formen bedeuten „Ich bin“. „I'm“ wird im Alltag häufiger verwendet.</p></details>
+        </div>
+      </article>
+
+      <article class="lesson-card german-lesson" id="german">
+        <div class="lesson-image">
+          <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Colorful historic buildings in a German city">
+          <span class="image-tag">🇩🇪 GERMAN · LESSON 1</span>
+        </div>
+        <div class="lesson-content">
+          <div class="lesson-title-row"><div><span class="level-label">START HERE · ANFÄNGER (BEGINNER)</span><h3>Hallo! Meet &amp; greet</h3></div><span class="lesson-emoji" aria-hidden="true">🌷</span></div>
+          <p class="lesson-intro">Start a conversation with these handy German phrases.</p>
+          <div class="phrase-list">
+            <div class="phrase"><span class="phrase-dot"></span><span><strong>Hallo! Ich heiße Mia.</strong><small>Ich heiße means “my name is”.</small></span><span class="translation">Hello! My name is Mia.</span></div>
+            <div class="phrase"><span class="phrase-dot"></span><span><strong>Freut mich!</strong><small>A friendly response when you meet someone.</small></span><span class="translation">Nice to meet you!</span></div>
+            <div class="phrase"><span class="phrase-dot"></span><span><strong>Wie geht's?</strong><small>Ask a new friend how they are.</small></span><span class="translation">How are you?</span></div>
+          </div>
+          <details class="tip-box german-tip"><summary>💡 Tiny tip: “ß” sounds like “ss”.</summary><p>In “heißt,” the letter ß has an “s” sound. You can also write “ss” when ß isn't available: “heisst.”</p></details>
+        </div>
+      </article>
+    </section>
+
+    <section class="practice-section" id="practice">
+      <div class="wrap practice-wrap">
+        <div class="section-heading practice-heading">
+          <div><span class="eyebrow">NO PRESSURE, JUST PRACTICE</span><h2>Quick quiz time!</h2></div>
+          <span class="quiz-doodle" aria-hidden="true">✎</span>
+        </div>
+        <p class="practice-intro">Pick an answer to see how you did. You can change your answer any time!</p>
+        <div class="quiz-grid">
+          <fieldset class="quiz-card" lang="de">
+            <legend><span class="quiz-flag">🇬🇧</span> Englisch üben</legend>
+            <p class="question">Du lernst jemanden kennen. Was kannst du sagen?</p>
+            <div class="answers">
+              <input type="radio" name="english-quiz" id="en-wrong">
+              <label for="en-wrong" lang="en">Good night, goodbye.</label>
+              <input type="radio" name="english-quiz" id="en-right">
+              <label for="en-right" lang="en">Hello! I'm Sam. Nice to meet you!</label>
+              <input type="radio" name="english-quiz" id="en-wrong2">
+              <label for="en-wrong2" lang="en">Where is the train station?</label>
+            </div>
+            <p class="answer-feedback correct-feedback" aria-live="polite">🎉 Genau! So stellst du dich freundlich vor.</p>
+            <p class="answer-feedback wrong-feedback" aria-live="polite">Noch nicht ganz — versuch es noch einmal oder schau dir die Englisch-Lektion an.</p>
+          </fieldset>
+          <fieldset class="quiz-card">
+            <legend><span class="quiz-flag">🇩🇪</span> German check-in</legend>
+            <p class="question">What does “Wie geht's?” mean?</p>
+            <div class="answers">
+              <input type="radio" name="german-quiz" id="de-wrong">
+              <label for="de-wrong">My name is...</label>
+              <input type="radio" name="german-quiz" id="de-right">
+              <label for="de-right">How are you?</label>
+              <input type="radio" name="german-quiz" id="de-wrong2">
+              <label for="de-wrong2">Good night!</label>
+            </div>
+            <p class="answer-feedback correct-feedback" aria-live="polite">🎉 Genau! “Wie geht's?” means “How are you?”</p>
+            <p class="answer-feedback wrong-feedback" aria-live="polite">Noch einmal! Check the German lesson above and give it another go.</p>
+          </fieldset>
+        </div>
+        <p class="quiz-note">These friendly mini-quizzes give instant feedback—no scores, sign-up, or stress.</p>
+      </div>
+    </section>
+
+    <section class="checklist-section wrap" id="checklist">
+      <div class="checklist-card">
+        <div class="checklist-copy">
+          <span class="eyebrow">YOUR LITTLE WINS</span>
+          <h2>Today's feel-good checklist</h2>
+          <p>Tick off a few steps as you go. Every one counts!</p>
+          <span class="checklist-note">Your checklist resets when you refresh the page.</span>
+        </div>
+        <div class="checklist-items">
+          <label class="check-item"><input type="checkbox"><span class="custom-check" aria-hidden="true"></span><span>Learn 3 new English phrases</span><span class="check-emoji">🌱</span></label>
+          <label class="check-item"><input type="checkbox"><span class="custom-check" aria-hidden="true"></span><span>Say “Hallo!” out loud</span><span class="check-emoji">🗣️</span></label>
+          <label class="check-item"><input type="checkbox"><span class="custom-check" aria-hidden="true"></span><span>Try both quick quizzes</span><span class="check-emoji">✨</span></label>
+          <label class="check-item"><input type="checkbox"><span class="custom-check" aria-hidden="true"></span><span>Come back for 5 minutes tomorrow</span><span class="check-emoji">☀️</span></label>
+        </div>
+      </div>
+    </section>
+
+    <section class="encouragement wrap">
+      <span aria-hidden="true">🌈</span>
+      <p>Making mistakes means you're learning. <strong>You're doing great!</strong></p>
+      <a href="#home">Back to top ↑</a>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="logo footer-logo" href="#home"><span class="logo-icon">✿</span> little lingua<span class="logo-dot">.</span></a><span>Made with ☀️ for curious beginners</span><span>English · Deutsch · Linda</span></footer>
+</body>
+</html>
