@@ -1,0 +1,188 @@
+/* linda.css - Styles for Linda the owl mascot (CSS only, no JavaScript) */
+
+/* 1. Colors (change these to restyle Linda's bubble and buttons) */
+:root {
+  --linda-bg: #ffffff;
+  --linda-border: #c9c2b8;
+  --linda-text: #2b2b2b;
+  --linda-muted: #6b6b6b;
+  --linda-accent: #2a9d8f;
+  --linda-focus: #f5a623;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --linda-bg: #2a2a2e;
+    --linda-border: #55555c;
+    --linda-text: #f1f1f1;
+    --linda-muted: #b5b5bb;
+  }
+}
+
+/* 2. Layout */
+.linda {
+  max-width: 140px;
+  margin: 0 auto;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.linda input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.linda .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* 3. Speech bubble */
+.linda__bubble {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 76px;
+  padding: 12px 14px;
+  background: var(--linda-bg);
+  border: 1px solid var(--linda-border);
+  border-radius: 12px;
+  color: var(--linda-text);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.linda__bubble::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -9px;
+  width: 16px;
+  height: 16px;
+  background: var(--linda-bg);
+  border-right: 1px solid var(--linda-border);
+  border-bottom: 1px solid var(--linda-border);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.linda__bubble p {
+  display: none;
+  margin: 0;
+}
+
+.linda__note {
+  font-size: 13px;
+  color: var(--linda-muted);
+}
+
+#linda-de:checked ~ .linda__bubble .linda__msg--de,
+#linda-en:checked ~ .linda__bubble .linda__msg--en,
+#linda-wd:checked ~ .linda__bubble .linda__msg--wd {
+  display: block;
+}
+
+/* 4. Owl and animations */
+.linda__stage {
+  margin-top: 14px;
+}
+
+#linda-de:checked ~ .linda__stage { animation: linda-hop-a 0.5s ease-out; }
+#linda-en:checked ~ .linda__stage { animation: linda-hop-b 0.5s ease-out; }
+#linda-wd:checked ~ .linda__stage { animation: linda-hop-c 0.5s ease-out; }
+
+@keyframes linda-hop-a { 0% { transform: translateY(0); } 40% { transform: translateY(-14px); } 100% { transform: translateY(0); } }
+@keyframes linda-hop-b { 0% { transform: translateY(0); } 40% { transform: translateY(-14px); } 100% { transform: translateY(0); } }
+@keyframes linda-hop-c { 0% { transform: translateY(0); } 40% { transform: translateY(-14px); } 100% { transform: translateY(0); } }
+
+.linda__owl {
+  width: 200px;
+  height: 220px;
+  cursor: pointer;
+  animation: linda-float 3s ease-in-out infinite;
+}
+
+@keyframes linda-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.linda__eye {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: linda-blink 4.5s infinite;
+}
+
+@keyframes linda-blink {
+  0%, 82%, 90% { transform: scaleY(1); }
+  95% { transform: scaleY(0.08); }
+}
+
+.linda__wing {
+  transform-box: fill-box;
+  transform-origin: 50% 0;
+}
+
+.linda__owl:hover .linda__wing--right { animation: linda-wave-r 0.5s ease-in-out 3; }
+.linda__owl:hover .linda__wing--left { animation: linda-wave-l 0.5s ease-in-out 3; }
+
+@keyframes linda-wave-r { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(-28deg); } }
+@keyframes linda-wave-l { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(28deg); } }
+
+.linda__head {
+  transition: transform 0.3s;
+}
+
+#linda-wd:checked ~ .linda__stage .linda__head {
+  transform: rotate(-6deg);
+  transform-origin: 100px 130px;
+}
+
+/* 5. Buttons */
+.linda__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+.linda__tabs label {
+  padding: 8px 14px;
+  background: var(--linda-bg);
+  border: 1px solid var(--linda-border);
+  border-radius: 8px;
+  color: var(--linda-text);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#linda-de:checked ~ .linda__tabs label[for="linda-de"],
+#linda-en:checked ~ .linda__tabs label[for="linda-en"],
+#linda-wd:checked ~ .linda__tabs label[for="linda-wd"] {
+  background: var(--linda-accent);
+  border-color: var(--linda-accent);
+  color: #ffffff;
+}
+
+#linda-de:focus-visible ~ .linda__tabs label[for="linda-de"],
+#linda-en:focus-visible ~ .linda__tabs label[for="linda-en"],
+#linda-wd:focus-visible ~ .linda__tabs label[for="linda-wd"] {
+  outline: 2px solid var(--linda-focus);
+  outline-offset: 2px;
+}
+
+/* 6. Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .linda__owl,
+  .linda__eye,
+  .linda__stage,
+  .linda__owl:hover .linda__wing {
+    animation: none !important;
+  }
+}
