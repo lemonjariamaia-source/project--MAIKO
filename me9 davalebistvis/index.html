@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery Image Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-buttons">
+      <a href="#" class="btn-pill">Download for Win</a>
+      <a href="#" class="btn-pill">Download for Mac</a>
+    </div>
+    <h1>jQuery Image Gallery</h1>
+    <p>Build an amazing and compatible with any device gallery of stunning illustrations
+       with a few moves through using this jQuery Gallery. A gallery is totally responsive,
+       customizable for your personal needs and more than that it is absolutely free for
+       any kind of use.</p>
+  </header>
+
+  <!-- EXAMPLE GALLERY (masonry) -->
+  <section class="example">
+    <h2>An Example of the Gallery</h2>
+    <div class="masonry">
+      <img src="https://picsum.photos/id/111/600/400" alt="Orange car">
+      <img src="https://picsum.photos/id/1018/600/800" alt="Sunset mountains">
+      <img src="https://picsum.photos/id/1015/600/500" alt="Clouds">
+      <img src="https://picsum.photos/id/1036/600/450" alt="Misty valley">
+      <img src="https://picsum.photos/id/152/600/500" alt="Flower">
+      <img src="https://picsum.photos/id/1067/600/600" alt="Buildings">
+      <img src="https://picsum.photos/id/1043/600/500" alt="City lights">
+      <img src="https://picsum.photos/id/1016/600/700" alt="Green mountain">
+    </div>
+  </section>
+
+  <!-- TAG GALLERY (CSS-only filter) -->
+  <section class="tags">
+    <h2>Photo Gallery with tags</h2>
+
+    <input type="radio" name="tag" id="t-all" checked>
+    <input type="radio" name="tag" id="t-beautiful">
+    <input type="radio" name="tag" id="t-creative">
+    <input type="radio" name="tag" id="t-cool">
+    <input type="radio" name="tag" id="t-awesome">
+
+    <div class="filters">
+      <label for="t-all">All</label>
+      <label for="t-beautiful">Beautiful</label>
+      <label for="t-creative">Creative</label>
+      <label for="t-cool">Cool</label>
+      <label for="t-awesome">Awesome</label>
+    </div>
+
+    <div class="thumbs">
+      <img class="beautiful" src="https://picsum.photos/id/1018/400/300" alt="">
+      <img class="creative"  src="https://picsum.photos/id/1024/400/300" alt="">
+      <img class="cool"      src="https://picsum.photos/id/1019/400/300" alt="">
+      <img class="awesome"   src="https://picsum.photos/id/1039/400/300" alt="">
+      <img class="beautiful" src="https://picsum.photos/id/1011/400/300" alt="">
+      <img class="cool"      src="https://picsum.photos/id/1025/400/300" alt="">
+      <img class="creative"  src="https://picsum.photos/id/1035/400/300" alt="">
+      <img class="awesome"   src="https://picsum.photos/id/1040/400/300" alt="">
+    </div>
+  </section>
+
+</body>
+</html>
